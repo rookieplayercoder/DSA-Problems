@@ -12,9 +12,9 @@ class Solution{
         while(slow!=fast)
           {
             slow= slow.next;
-            head = head.next;
+            fast = fast.next;
           }
-        return head;
+        return slow;
       }
     }
     return null;
