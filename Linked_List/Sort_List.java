@@ -7,8 +7,8 @@ class Solution{
     Node midNext = mid.next;
     mid.next = null;
 
-    Node leftSort = head;
-    Node rightSort = midNext;
+    Node leftSort = sortList(head);
+    Node rightSort = sortList(midNext);
 
     return merge(leftSort,rightSort);
   }
