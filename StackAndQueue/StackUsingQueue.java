@@ -9,6 +9,7 @@ class Queue{
   public int pop()
   {
     int m = q.size();
+    if(m==1) return q.remove();
     while(m>1)
       {
         q.add(q.remove());
