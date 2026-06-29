@@ -10,7 +10,7 @@ class Solution
           {
             st.pop();
           }
-          if(st.isEmpty)
+          if(st.isEmpty())
           {
             map.put(current,-1);
           }
