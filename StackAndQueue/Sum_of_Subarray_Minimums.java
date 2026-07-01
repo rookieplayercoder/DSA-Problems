@@ -1,5 +1,6 @@
+
 class Solution {
-    public int sumSubarrayMins(int[] arr) {
+    public int sumSubMins(int[] arr) {
       int[] nse = findNSE(arr);
       int[] pse = findPSE(arr);
       int n = arr.length;
@@ -17,15 +18,16 @@ class Solution {
   {
     int n = arr.length;
     Stack<Integer> st = new Stack<>();
-    int[] ans = new int[];
+    int[] ans = new int[n];
     Arrays.fill(ans,n);
     for(int i = n-1;i>=0;i--)
       {
+          int current = arr[i];
         while(!st.isEmpty() && current<=arr[st.peek()])
         {
           st.pop();
         }
-        if(!st.isEmpty)
+        if(!st.isEmpty())
         {
           ans[i] = st.peek();
         }
@@ -37,19 +39,21 @@ class Solution {
   {
     int n = arr.length;
     Stack<Integer> st = new Stack<>();
-    int[] ans = new int[];
+    int[] ans = new int[n];
     Arrays.fill(ans,-1);
     for(int i = 0;i<n;i++)
       {
+          int current = arr[i];
         while(!st.isEmpty() && current<arr[st.peek()])
         {
           st.pop();
         }
-        if(!st.isEmpty)
+        if(!st.isEmpty())
         {
           ans[i] = st.peek();
         }
         st.push(i);
       }
-    return ans;
+     return ans;
+  }
 }
