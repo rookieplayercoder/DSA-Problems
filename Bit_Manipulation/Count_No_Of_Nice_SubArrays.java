@@ -6,7 +6,7 @@ class Solution{
      for(int right = 0;right< nums.length;right++)
        {
          int i = nums[right]%2;
-         sum+=map.getOrDefault(sum-k,0);
+         sum+=i;
          count+=map.getOrDefault(sum-k,0);
          map.put(sum,map.getOrDefault(sum,0)+1);
        }
