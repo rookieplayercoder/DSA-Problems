@@ -6,7 +6,7 @@ class solution{
       {
         if(i> farthest) return false;
         farthest = Math.max(farthest,nums[i] + i);
-        if(i==n-1) return true;
+        if(i==n-1) return true;    //if(farthest>=n-1) return true;
       }
     return false;
   }
